@@ -1,0 +1,32 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: formsdb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: root
+    volumes:
+      - db_data:/var/lib/mysql
+    ports:
+      - "3307:3306"
+  
+  nest:
+    build: .
+    container_name: nest_api
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_HOST: mysql
+      DATABASE_PORT: 3306
+      DATABASE_USER: user
+      DATABASE_PASSWORD: root
+      DATABASE_NAME: formsdb
+    depends_on:
+      - mysql
+
+volumes:
+  db_data:
