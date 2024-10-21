@@ -18,7 +18,7 @@ services:
     container_name: nest_api
     restart: always
     ports:
-      - "3000:3000"
+      - "4200:4200"
     environment:
       DATABASE_HOST: mysql
       DATABASE_PORT: 3306

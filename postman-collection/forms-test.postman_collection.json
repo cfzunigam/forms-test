@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "0769045c-cd20-469a-999e-8bb7408de7ff",
+		"name": "forms-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37907065"
+	},
+	"item": [
+		{
+			"name": "add-forms",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Formulario de ejemplo\",\n  \"description\": \"Detalle de casos\",\n  \"fields\": [\n    {\n      \"name\": \"first_name\",\n      \"label\": \"Primer nombre\",\n      \"type\": \"text\",\n      \"required\": false\n    },\n    {\n      \"name\": \"option_1\",\n      \"label\": \"Opciones\",\n      \"type\": \"select\",\n      \"required\": true,\n      \"values\": [\"Sí\", \"No\"],\n      \"defaultValue\": \"No\"\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/forms",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"forms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-forms",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/forms",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"forms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find-form",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/forms/{id}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"forms",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
