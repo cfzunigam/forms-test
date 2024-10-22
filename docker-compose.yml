@@ -25,6 +25,7 @@ services:
       DATABASE_USER: user
       DATABASE_PASSWORD: root
       DATABASE_NAME: formsdb
+      PORT: 4200
     depends_on:
       - mysql
 
