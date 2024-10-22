@@ -10,7 +10,7 @@ $ npm install
 $ npm run start:docker
 
 # end docker
-$ npm run start:docker
+$ npm run end:docker
 ```
 
 ## Compile and run the project
